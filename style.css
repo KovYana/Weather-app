@@ -1,0 +1,30 @@
+h1,
+h2,
+h3 {
+  color: #44558f;
+  font-family: "DynaPuff", cursive;
+}
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  background: #e6f7f7;
+}
+
+.search-form {
+  margin-bottom: 20px;
+  width: 600px;
+  padding: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forecaste {
+  font-size: 15px;
+}
+.units {
+  text-decoration: none;
+  font-size: 20px;
+}
