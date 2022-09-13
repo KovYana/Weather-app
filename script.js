@@ -74,3 +74,14 @@ function showFahrenheit(event) {
 
 let fahrenheinTemp = document.querySelector("#fahrenheit-link");
 fahrenheinTemp.addEventListener("click", showFahrenheit);
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  let temperature = temperatureElement.innerHTML;
+  temperature = Number(temperature);
+  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+}
+
+let celsiusTemp = document.querySelector("#celsius-link");
+celsiusTemp.addEventListener("click", showCelsius);
