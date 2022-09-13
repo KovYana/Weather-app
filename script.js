@@ -39,15 +39,17 @@ function showTemp(response) {
     response.data.wind.speed
   )} km/h`;
 }
-
+function show(city) {
+  let apiKey = "36c58b321eebc67821aa228dc67d4641";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemp);
+}
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input");
   let h1 = document.querySelector("#current-city");
   h1.innerHTML = city.value;
-  let apiKey = "36c58b321eebc67821aa228dc67d4641";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemp);
+  show(city);
 }
 function searchLocation(position) {
   let apiKey = "36c58b321eebc67821aa228dc67d4641";
@@ -85,3 +87,5 @@ function showCelsius(event) {
 
 let celsiusTemp = document.querySelector("#celsius-link");
 celsiusTemp.addEventListener("click", showCelsius);
+
+show("Kyiv");
