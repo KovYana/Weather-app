@@ -1,26 +1,29 @@
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let day = days[now.getDay()];
+  let day = days[now.getDay()];
 
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
-}
-let minute = now.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${day}, ⌚${hour}:${minute}`;
 }
 let date = document.querySelector("#date-and-time");
-date.innerHTML = `${day}, ⌚${hour}:${minute}`;
+let now = new Date();
+date.innerHTML = formatDate(now);
 
 function showTemp(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
