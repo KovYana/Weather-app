@@ -28,3 +28,16 @@ h3 {
   text-decoration: none;
   font-size: 20px;
 }
+.coded-by {
+  color: #ffc97b;
+  max-width: 1000px;
+}
+.coded-by.githut-link.link {
+  text-decoration: none;
+  outline: none;
+}
+
+.coded-by.githut-link.hover {
+  cursor: pointer;
+  color: #44558f;
+}
