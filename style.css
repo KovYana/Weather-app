@@ -4,6 +4,7 @@ h3 {
   color: #44558f;
   font-family: "DynaPuff", cursive;
 }
+
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
@@ -20,24 +21,34 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+#current-temperature {
+  font-size: 45px;
+}
 
+.units {
+  font-size: 18px;
+  position: relative;
+  top: -17px;
+}
+#units {
+  text-decoration: none;
+  outline: none;
+}
 .forecaste {
   font-size: 15px;
+  padding-top: 20px;
 }
-.units {
-  text-decoration: none;
-  font-size: 20px;
-}
+
 .coded-by {
   color: #ffc97b;
-  max-width: 1000px;
+  max-width: 100%;
 }
-.coded-by.githut-link.link {
+#github-link {
   text-decoration: none;
   outline: none;
 }
 
-.coded-by.githut-link.hover {
+#githut-link.hover {
   cursor: pointer;
   color: #44558f;
 }

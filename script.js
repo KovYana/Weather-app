@@ -85,5 +85,3 @@ function showCelsius(event) {
 
 let celsiusTemp = document.querySelector("#celsius-link");
 celsiusTemp.addEventListener("click", showCelsius);
-
-show("Kyiv");
