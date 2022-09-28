@@ -38,14 +38,12 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
-}
-function showIcon() {
-  let img = new Image();
-  img.addEventListener(`submit`, function () {
-    img.src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-    let iconElement = document.querySelector("#icon");
-    iconElement.appendChild(img);
-  });
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchCity(event) {
