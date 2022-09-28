@@ -30,10 +30,7 @@ h3 {
   position: relative;
   top: -17px;
 }
-#units {
-  text-decoration: none;
-  outline: none;
-}
+
 .forecaste {
   font-size: 15px;
   padding-top: 20px;
@@ -51,4 +48,9 @@ h3 {
 #githut-link.hover {
   cursor: pointer;
   color: #44558f;
+}
+.units .active {
+  color: #44558f;
+  cursor: default;
+  text-decoration: none;
 }
