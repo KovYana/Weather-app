@@ -89,7 +89,35 @@ function showCelsius(event) {
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function displayForecaste() {
+  let forecasteElement = document.querySelector("#forecaste");
+  let forecasteHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecasteHTML =
+      forecasteHTML +
+      ` 
+            <div class="col-2">
+              <div class="weather-forecaste-date"><h3>${day}</h3></div>
+              <img src="" alt="" />
+              <div class="weather-forecaste-temperature"> <span class="weather-forecaste-temperatu-max">
+                  <strong>24°</strong>
+                </span>
+                <span class="weather-forecaste-temperature-min"> 17°</span>
+              </div>
+            </div>
+          `;
+  });
+
+  forecasteHTML = forecasteHTML + `</div>`;
+
+  forecasteElement.innerHTML = forecasteHTML;
+}
+
 let celsiusTemperature = null;
+
+displayForecaste();
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
